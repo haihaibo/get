@@ -1,0 +1,40 @@
+#编辑默认环境
+spring:
+  profiles:
+    active: pord
+
+#1.使用yml文件有层级结构
+#2.使用yml文件 key value 之间使用:号连接
+#3.赋值时:号后边必须加空格
+
+#环境分割
+---
+spring:
+  profiles: dev
+
+#定义端口
+server:
+  port: 8090 
+  servlet:
+    context-path: /
+
+#为user属性赋值
+user:
+  id: 100
+  username: 牙没了
+  age: 2002
+  
+#环境分割 
+---
+spring:
+  profiles: pord
+  
+server:
+  port: 8082
+  servlet:
+    context-path: /dome
+    
+user:
+  id: 2000
+  username: yml
+  age: 30000

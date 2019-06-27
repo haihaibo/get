@@ -7,6 +7,7 @@ import com.example.demo.pojo.Shiro;
 
 @Configuration
 public class ShiroConfig {
+	//交给spring管理
 	@Bean
 	public Shiro shiro() {
 		return new Shiro();
